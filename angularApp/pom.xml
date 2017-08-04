@@ -9,26 +9,23 @@
     <groupId>angularApp</groupId>
     <artifactId>angularApp</artifactId>
     <packaging>war</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <name>angularApp</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <scm>
-        <url>https://github.com/apatharraj/mavenExample</url>
-        <connection>scm:git:git://git@github.com:apatharraj/mavenExample.git</connection>
-        <developerConnection>
-            scm:git:https://github.com/apatharraj/mavenExample.git
-        </developerConnection>
-        <tag>angularApp-1.0</tag>
-    </scm>
     <distributionManagement>
         <repository>
             <id>ftp-repository</id>
             <name>FTP Repository</name>
             <url>ftp://design.augusta-qa.com/design/patharraj/maven</url>
         </repository>
+        <snapshotRepository>
+            <id>ftp-repository</id>
+            <name>FTP Repository</name>
+            <url>ftp://design.augusta-qa.com/design/patharraj/maven</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>

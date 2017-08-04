@@ -19,7 +19,7 @@
         <url>https://github.com/apatharraj/mavenExample</url>
         <connection>scm:git:git://git@github.com:apatharraj/mavenExample.git</connection>
         <developerConnection>
-            scm:git:git@github.com:apatharraj/mavenExample.git
+            scm:git:https://github.com/apatharraj/mavenExample.git
         </developerConnection>
         <tag>angularApp-1.0</tag>
     </scm>

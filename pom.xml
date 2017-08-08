@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>scm_deploy</groupId>
     <artifactId>scm_deploy</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>pom</packaging>
     <name>scm_deploy</name>
     <modules>
@@ -16,7 +16,7 @@
         <developerConnection>
             scm:git:https://github.com/apatharraj/mavenExample.git
         </developerConnection>
-        <tag>angularApp-1.0</tag>
+        <tag>scm_deploy-1.2</tag>
     </scm>
     <profiles>
         <profile>

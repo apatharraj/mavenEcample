@@ -15,18 +15,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <distributionManagement>
-        <repository>
-            <id>ftp-repository</id>
-            <name>FTP Repository</name>
-            <url>ftp://design.augusta-qa.com/design/patharraj/maven</url>
-        </repository>
-        <snapshotRepository>
-            <id>ftp-repository</id>
-            <name>FTP Repository</name>
-            <url>ftp://design.augusta-qa.com/design/patharraj/maven</url>
-        </snapshotRepository>
-    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -63,29 +51,12 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <port>9000</port>
-                    <server>TomcatServer</server>
-                    <path>/</path>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>apache-tomcat</server>
+                    <path>/${project.artifactId}</path>
+                    <username>admin</username>
+                    <password>password</password>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>downloads-maven-plugin</artifactId>
-                <version>0.6</version>
-                <configuration>
-                    <description>Official ${project.name} build of the ${project.version} release</description>
-                    <override>true</override>
-                    <includeAttached>true</includeAttached>
-                    <server>github</server>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>upload</goal>
-                        </goals>
-                        <phase>install</phase>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>com.github.github</groupId>
@@ -143,12 +114,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ftp</artifactId>
-                <version>1.0-beta-6</version>
-            </extension>
-        </extensions>
+       
     </build>
 </project>
